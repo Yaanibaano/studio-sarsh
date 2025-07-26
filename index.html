@@ -7,6 +7,9 @@
     <meta name="description" content="Award-winning interior architecture studio in Chennai. Creating timeless, sophisticated spaces that reflect your story. Schedule your consultation today.">
     <meta name="keywords" content="luxury interior design, interior architecture, Chennai interior designer, residential design, commercial design, Susmitha Velluru">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo/Logo Submark Cream.png">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -54,6 +57,25 @@
             text-decoration: none;
         }
 
+        .btn-hero {
+            @apply inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300;
+            background: var(--luxury-gold);
+            color: var(--primary-black);
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 0;
+            text-decoration: none;
+            padding: 18px 48px;
+            margin-top: 24px;
+        }
+
+        .btn-hero:hover {
+            background: #b8956a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.3);
+        }
+
         .btn-secondary {
             @apply inline-flex items-center justify-center px-6 py-3 border border-black text-black bg-transparent font-medium tracking-wide hover:bg-black hover:text-white transition-all duration-300;
             font-size: 13px;
@@ -71,9 +93,27 @@
                 width: 100%;
                 display: flex;
             }
+
+            .btn-hero {
+                padding: 16px 32px;
+                font-size: 14px;
+                width: auto;
+                display: inline-flex;
+                margin-top: 20px;
+            }
         }
 
         /* Header System */
+        .header-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .header-visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
         .header-glass {
             backdrop-filter: blur(20px);
             background: rgba(250, 249, 247, 0.95);
@@ -152,6 +192,63 @@
             border-top: 5px solid rgba(255, 255, 255, 0.7);
             pointer-events: none;
         }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
+            color: white;
+        }
+
+        /* Hero Logo */
+        .hero-logo {
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            transition: all 0.5s ease;
+            opacity: 1;
+        }
+
+        .hero-logo.hidden {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-20px);
+            pointer-events: none;
+        }
+
+        .hero-logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-logo img {
+                height: 60px;
+            }
+        }
     </style>
     
     <!-- Tailwind Config -->
@@ -181,8 +278,12 @@
     </script>
 </head>
 <body class="font-sans text-primary-black bg-warm-white antialiased">
+    <!-- Hero Logo -->
+    <div class="hero-logo" id="hero-logo">
+        <img src="images/logo/Logo Submark Cream.png" alt="Studio SARSH" />
+    </div>
     <!-- Professional Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-hidden" id="main-header">
         <nav class="container-custom flex items-center justify-between py-6">
             <!-- Logo -->
             <a href="index.html" class="text-2xl font-serif font-medium text-primary-black hover:text-luxury-gold transition-colors duration-300">
@@ -248,7 +349,7 @@
 
                     <!-- Primary CTA -->
                     <div class="mb-16">
-                        <a href="#contact" class="btn-primary text-lg px-12 py-5">
+                        <a href="#contact" class="btn-hero">
                             Schedule Your Consultation
                         </a>
                     </div>
@@ -257,7 +358,7 @@
                     <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 text-caption opacity-80">
                         <div class="flex items-center space-x-2">
                             <div class="w-2 h-2 bg-luxury-gold rounded-full"></div>
-                            <span>Based in Chennai</span>
+                            <span>Nungambakkam, Chennai</span>
                         </div>
                         <div class="flex items-center space-x-2">
                             <div class="w-2 h-2 bg-luxury-gold rounded-full"></div>
@@ -326,18 +427,26 @@
                     <div class="slide-up">
                         <div class="relative">
                             <div class="aspect-[4/5] overflow-hidden">
-                                <img src="images/about-blue-villa.jpg"
+                                <img src="images/projects/2/2.png"
                                      alt="Studio SARSH - Brushed in Blue Project"
                                      class="w-full h-full object-cover">
                             </div>
 
-                            <!-- Quote Card -->
-                            <div class="absolute -bottom-8 -left-8 bg-white p-8 shadow-lg max-w-sm border-l-2 border-luxury-gold">
+                            <!-- Quote Card - Desktop -->
+                            <div class="hidden lg:block absolute -bottom-8 -left-8 bg-white p-8 shadow-lg max-w-sm border-l-2 border-luxury-gold">
                                 <p class="text-body italic text-medium-gray mb-4">
                                     "We design for anyone who believes their space should reflect who they are and support who they're becoming."
                                 </p>
                                 <div class="text-caption font-medium text-primary-black">— Susmitha Velluru, Founder</div>
                             </div>
+                        </div>
+
+                        <!-- Quote Card - Mobile -->
+                        <div class="lg:hidden mt-8 bg-white p-6 shadow-lg border-l-4 border-luxury-gold">
+                            <p class="text-body italic text-medium-gray mb-4">
+                                "We design for anyone who believes their space should reflect who they are and support who they're becoming."
+                            </p>
+                            <div class="text-caption font-medium text-primary-black">— Susmitha Velluru, Founder</div>
                         </div>
                     </div>
                 </div>
@@ -456,95 +565,106 @@
                 </div>
 
                 <!-- Projects Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <!-- Project 1 -->
-                    <div class="slide-up group">
-                        <div class="relative overflow-hidden mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1: Light and Lineage Farmhouse -->
+                    <div class="slide-up group cursor-pointer" onclick="window.location.href='project-1.html'">
+                        <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/project-farmhouse.jpg"
+                                <img src="images/projects/1/1.png"
                                      alt="Light and Lineage Farmhouse"
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
-                                Farmhouse Renovation • Heritage Retention
+                                Chennai, India
                             </div>
-                            <h3 class="text-heading font-serif font-medium">Light and Lineage Farmhouse</h3>
-                            <p class="text-body text-medium-gray leading-relaxed">
-                                A renovation rooted in preservation, sustainability, and memory. This project began with reverence for what was already there, creating a space that honors heritage while embracing modern comfort.
-                            </p>
-                            <div class="text-caption text-medium-gray">Chennai, India</div>
+                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                                Light and Lineage Farmhouse
+                            </h3>
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="slide-up group">
-                        <div class="relative overflow-hidden mb-6">
+                    <!-- Project 2: Brushed in Blue -->
+                    <div class="slide-up group cursor-pointer" onclick="window.location.href='project-2.html'">
+                        <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/project-blue-villa.jpg"
+                                <img src="images/projects/2/1.png"
                                      alt="Brushed in Blue Villa"
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
-                                Private Villa • Tonal Flow • Effortless Design
+                                Chennai, India
                             </div>
-                            <h3 class="text-heading font-serif font-medium">Brushed in Blue</h3>
-                            <p class="text-body text-medium-gray leading-relaxed">
-                                A villa concept exploring how calm can be expressive and softness can feel intentional. Every design choice creates ease without emptiness, resulting in a home that breathes tranquility.
-                            </p>
-                            <div class="text-caption text-medium-gray">Chennai, India</div>
+                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                                Brushed in Blue
+                            </h3>
                         </div>
                     </div>
 
-                    <!-- Project 3 -->
-                    <div class="slide-up group">
-                        <div class="relative overflow-hidden mb-6">
+                    <!-- Project 3: The Row House -->
+                    <div class="slide-up group cursor-pointer" onclick="window.location.href='project-3.html'">
+                        <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/project-row-house.jpg"
+                                <img src="images/projects/3/1.png"
                                      alt="The Row House Family Home"
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
-                                3BHK Family Home • Functional Zoning • Layered Elegance
+                                Chennai, India
                             </div>
-                            <h3 class="text-heading font-serif font-medium">The Row House</h3>
-                            <p class="text-body text-medium-gray leading-relaxed">
-                                Designed for a young family seeking comfort without stiffness. The proposal focuses on emotional zoning using light, material, and color to give each space its own distinct identity.
-                            </p>
-                            <div class="text-caption text-medium-gray">Chennai, India</div>
+                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                                The Row House
+                            </h3>
                         </div>
                     </div>
 
-                    <!-- Project 4 -->
-                    <div class="slide-up group">
-                        <div class="relative overflow-hidden mb-6">
+                    <!-- Project 4: Nooks and Notebooks -->
+                    <div class="slide-up group cursor-pointer" onclick="window.location.href='project-4.html'">
+                        <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/project-office.jpg"
-                                     alt="The Inner Circle Executive Office"
+                                <img src="images/projects/4/1.png"
+                                     alt="Nooks and Notebooks Kids Room"
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
-                        <div class="space-y-4">
+                        <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
-                                Executive Office • Sophisticated Minimalism • Quiet Power
+                                Chennai, India
                             </div>
-                            <h3 class="text-heading font-serif font-medium">The Inner Circle</h3>
-                            <p class="text-body text-medium-gray leading-relaxed">
-                                A CEO's strategic retreat crafted for clarity, trust, and meaningful decision-making. Every choice supports focus, intention, and thoughtful leadership.
-                            </p>
-                            <div class="text-caption text-medium-gray">Chennai, India</div>
+                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                                Nooks and Notebooks
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Modern Sanctuary -->
+                    <div class="slide-up group cursor-pointer" onclick="window.location.href='project-5.html'">
+                        <div class="relative overflow-hidden mb-4">
+                            <div class="aspect-[4/3]">
+                                <img src="images/projects/5/1.png"
+                                     alt="Modern Sanctuary"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
+                                Chennai, India
+                            </div>
+                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                                Modern Sanctuary
+                            </h3>
                         </div>
                     </div>
                 </div>
 
                 <!-- CTA -->
                 <div class="text-center mt-20 slide-up">
-                    <a href="#contact" class="btn-secondary">
+                    <a href="projects.html" class="btn-secondary">
                         View All Projects
                     </a>
                 </div>
@@ -641,8 +761,8 @@
                                 </div>
                                 <div>
                                     <div class="text-body font-medium mb-1">Email</div>
-                                    <a href="mailto:hello@studiosarsh.com" class="text-luxury-gold hover:text-white transition-colors">
-                                        hello@studiosarsh.com
+                                    <a href="mailto:sushmitha@studiosarsh.com" class="text-luxury-gold hover:text-white transition-colors">
+                                        sushmitha@studiosarsh.com
                                     </a>
                                 </div>
                             </div>
@@ -656,7 +776,11 @@
                                 </div>
                                 <div>
                                     <div class="text-body font-medium mb-1">Location</div>
-                                    <div class="text-gray-300">Chennai, India</div>
+                                    <div class="text-gray-300">
+                                        No:143/1, Uthamar Gandhi Road,<br>
+                                        Opp. The Park Hotel, Nungambakkam<br>
+                                        Tamil Nadu-600034
+                                    </div>
                                 </div>
                             </div>
 
@@ -681,20 +805,20 @@
                             <p class="text-body text-gray-300">Let's discuss how we can transform your space</p>
                         </div>
 
-                        <form class="space-y-6">
+                        <form action="https://formcarry.com/s/icvIy4SVMZp" method="POST" enctype="multipart/form-data" class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <input type="text" placeholder="Full Name" required
+                                <input type="text" name="full_name" placeholder="Full Name" required
                                        class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
 
-                                <input type="email" placeholder="Email Address" required
+                                <input type="email" name="email" placeholder="Email Address" required
                                        class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
                             </div>
 
-                            <input type="tel" placeholder="Phone Number"
+                            <input type="tel" name="phone" placeholder="Phone Number"
                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
 
                             <div class="select-wrapper">
-                                <select class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300 appearance-none cursor-pointer">
+                                <select name="project_type" class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300 appearance-none cursor-pointer">
                                     <option value="" class="text-gray-800 bg-white">Project Type</option>
                                     <option value="residential" class="text-gray-800 bg-white">Residential Design</option>
                                     <option value="commercial" class="text-gray-800 bg-white">Commercial Spaces</option>
@@ -703,8 +827,13 @@
                                 </select>
                             </div>
 
-                            <textarea placeholder="Tell us about your project" rows="4"
+                            <textarea name="message" placeholder="Tell us about your project" rows="4"
                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300 resize-none"></textarea>
+
+                            <!-- Hidden fields for additional context -->
+                            <input type="hidden" name="_gotcha" style="display:none !important">
+                            <input type="hidden" name="source" value="Studio SARSH Website">
+                            <input type="hidden" name="form_type" value="Consultation Request">
 
                             <button type="submit" class="w-full px-6 py-4 bg-luxury-gold text-primary-black font-medium uppercase tracking-wide hover:bg-luxury-gold/90 transition-all duration-300">
                                 Schedule Consultation
@@ -729,17 +858,17 @@
                         Creating timeless interiors that reflect your story and elevate your lifestyle.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="mailto:hello@studiosarsh.com" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="Email">
+                        <a href="mailto:sushmitha@studiosarsh.com" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="Email">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </a>
-                        <a href="https://instagram.com/studiosarsh" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/studio_sarsh?igsh=MWpyNjFpNHY2bm14cA%3D%3D&utm_source=qr" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01M8 12a4 4 0 108 0 4 4 0 00-8 0zM21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
                             </svg>
                         </a>
-                        <a href="https://linkedin.com/company/studiosarsh" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <a href="https://linkedin.com/company/studio-sarsh" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 616 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 616-6zM2 9h4v12H2zM4 2a2 2 0 11-4 4 2 2 0 014-4z"></path>
                             </svg>
@@ -763,12 +892,14 @@
                     <h4 class="text-body font-medium text-primary-black mb-6">Contact</h4>
                     <div class="space-y-3">
                         <div>
-                            <a href="mailto:hello@studiosarsh.com" class="text-medium-gray hover:text-luxury-gold transition-colors">
-                                hello@studiosarsh.com
+                            <a href="mailto:sushmitha@studiosarsh.com" class="text-medium-gray hover:text-luxury-gold transition-colors">
+                                sushmitha@studiosarsh.com
                             </a>
                         </div>
                         <div class="text-medium-gray">
-                            Chennai, India
+                            No:143/1, Uthamar Gandhi Road,<br>
+                            Opp. The Park Hotel, Nungambakkam<br>
+                            Tamil Nadu-600034
                         </div>
                         <div class="text-medium-gray">
                             Serving India & Beyond
@@ -784,6 +915,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/916385770416" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
 
     <!-- JavaScript -->
     <script>
@@ -803,25 +941,52 @@
             });
         }
 
-        // Function to update header background based on scroll and mobile menu state
+        // Function to update header background and visibility based on scroll and mobile menu state
         function updateHeaderBackground() {
-            const isScrolled = window.scrollY > 50;
+            const isScrolled = window.scrollY > 100;
+            const heroSection = document.querySelector('section');
+            const heroHeight = heroSection ? heroSection.offsetHeight : window.innerHeight;
+            const isInHeroSection = window.scrollY < heroHeight - 200;
+            const heroLogo = document.getElementById('hero-logo');
+
+            // Hide logo earlier to prevent overlap with hero text
+            const logoShouldBeVisible = window.scrollY < 150; // Hide logo after 150px scroll
 
             // Remove all header classes first
-            header.classList.remove('header-glass', 'header-mobile-open');
+            header.classList.remove('header-glass', 'header-mobile-open', 'header-hidden', 'header-visible');
 
             if (isMobileMenuOpen) {
-                // Mobile menu is open - always show solid background
-                header.classList.add('header-mobile-open');
+                // Mobile menu is open - always show navbar with solid background, hide hero logo
+                header.classList.add('header-mobile-open', 'header-visible');
+                if (heroLogo) heroLogo.classList.add('hidden');
+            } else if (isInHeroSection) {
+                // In hero section - hide navbar, show/hide hero logo based on scroll position
+                header.classList.add('header-hidden');
+                if (heroLogo) {
+                    if (logoShouldBeVisible) {
+                        heroLogo.classList.remove('hidden');
+                    } else {
+                        heroLogo.classList.add('hidden');
+                    }
+                }
             } else if (isScrolled) {
-                // Mobile menu is closed but page is scrolled - show glass effect
-                header.classList.add('header-glass');
+                // Scrolled past hero - show navbar with glass effect, hide hero logo
+                header.classList.add('header-glass', 'header-visible');
+                if (heroLogo) heroLogo.classList.add('hidden');
+            } else {
+                // Just past hero but not scrolled much - show transparent navbar, hide hero logo
+                header.classList.add('header-visible');
+                if (heroLogo) heroLogo.classList.add('hidden');
             }
-            // If mobile menu is closed and not scrolled, header stays transparent
         }
 
         // Header scroll effect
         window.addEventListener('scroll', () => {
+            updateHeaderBackground();
+        });
+
+        // Initialize header and logo state on page load
+        document.addEventListener('DOMContentLoaded', () => {
             updateHeaderBackground();
         });
 
@@ -868,7 +1033,7 @@
             observer.observe(el);
         });
 
-        // Form enhancement
+        // Form enhancement with Formcarry integration
         const form = document.querySelector('form');
         if (form) {
             form.addEventListener('submit', function(e) {
@@ -887,22 +1052,152 @@
                     }
                 });
 
-                if (isValid) {
-                    // Show success message
-                    const button = form.querySelector('button[type="submit"]');
-                    const originalText = button.textContent;
-                    button.textContent = 'Message Sent!';
-                    button.style.backgroundColor = '#10b981';
+                if (!isValid) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                // Show loading state
+                const button = form.querySelector('button[type="submit"]');
+                const originalText = button.textContent;
+                button.textContent = 'Sending...';
+                button.disabled = true;
+                button.style.opacity = '0.7';
+
+                // Submit to Formcarry
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success - Show confetti!
+                        triggerConfetti();
+
+                        button.textContent = 'Message Sent!';
+                        button.style.backgroundColor = '#10b981';
+                        button.style.opacity = '1';
+
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                            button.style.backgroundColor = '';
+                            button.disabled = false;
+                            form.reset();
+                        }, 3000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    // Error handling
+                    console.error('Form submission error:', error);
+                    button.textContent = 'Error - Try Again';
+                    button.style.backgroundColor = '#ef4444';
+                    button.style.opacity = '1';
 
                     setTimeout(() => {
                         button.textContent = originalText;
                         button.style.backgroundColor = '';
-                        form.reset();
+                        button.disabled = false;
                     }, 3000);
-                } else {
-                    alert('Please fill in all required fields.');
-                }
+                });
             });
+        }
+
+        // Custom Confetti Implementation
+        function triggerConfetti() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas properties
+            canvas.style.position = 'fixed';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.pointerEvents = 'none';
+            canvas.style.zIndex = '9999';
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            document.body.appendChild(canvas);
+
+            const particles = [];
+            const colors = ['#c9a96e', '#1a1a1a', '#ffffff', '#f5f5f5', '#d4af37'];
+
+            // Create particles
+            for (let i = 0; i < 100; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: canvas.height + 10,
+                    vx: (Math.random() - 0.5) * 10,
+                    vy: -(Math.random() * 15 + 10),
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    size: Math.random() * 8 + 4,
+                    gravity: 0.3,
+                    life: 1.0,
+                    decay: Math.random() * 0.02 + 0.01
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    const p = particles[i];
+
+                    // Update position
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += p.gravity;
+                    p.life -= p.decay;
+
+                    // Draw particle
+                    ctx.save();
+                    ctx.globalAlpha = p.life;
+                    ctx.fillStyle = p.color;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+
+                    // Remove dead particles
+                    if (p.life <= 0 || p.y > canvas.height + 50) {
+                        particles.splice(i, 1);
+                    }
+                }
+
+                if (particles.length > 0) {
+                    requestAnimationFrame(animate);
+                } else {
+                    // Clean up
+                    document.body.removeChild(canvas);
+                }
+            }
+
+            animate();
+
+            // Add some extra bursts
+            setTimeout(() => {
+                for (let i = 0; i < 50; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.width,
+                        y: canvas.height * 0.8,
+                        vx: (Math.random() - 0.5) * 8,
+                        vy: -(Math.random() * 12 + 8),
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        size: Math.random() * 6 + 3,
+                        gravity: 0.25,
+                        life: 1.0,
+                        decay: Math.random() * 0.015 + 0.008
+                    });
+                }
+            }, 500);
         }
     </script>
 </body>
