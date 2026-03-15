@@ -1,292 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio SARSH - Luxury Interior Architecture & Design | Chennai</title>
-    <meta name="description" content="Award-winning interior architecture studio in Chennai. Creating timeless, sophisticated spaces that reflect your story. Schedule your consultation today.">
-    <meta name="keywords" content="luxury interior design, interior architecture, Chennai interior designer, residential design, commercial design, Susmitha Velluru">
+    <title>Interior Designer in Chennai | Studio SARSH — Luxury Residential & Commercial
+        Design</title>
+    <meta name="description"
+        content="Award-winning interior architecture studio in Chennai. Creating timeless, sophisticated spaces that reflect your story. Schedule your consultation today.">
+    <meta name="keywords"
+        content="luxury interior design, interior architecture, Chennai interior designer, residential design, commercial design, Susmitha Velluru">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo/Logo Submark Cream.png">
+    <link rel="icon" type="image/webp" href="images/logo/Logo Submark Cream.webp">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InteriorDesigner",
+      "name": "Studio SARSH",
+      "description": "Luxury interior architecture and design studio in Chennai founded by Susmitha Velluru. Specialising in residential and commercial spaces across Tamil Nadu.",
+      "url": "https://www.studiosarsh.com",
+      "telephone": "+916385770416",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No:143/1, Uthamar Gandhi Road, Opp. The Park Hotel",
+        "addressLocality": "Nungambakkam",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600034",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.0569,
+        "longitude": 80.2425
+      },
+      "openingHours": "Mo-Sa 09:00-18:00",
+      "sameAs": [
+        "https://www.instagram.com/studio_sarsh",
+        "https://linkedin.com/company/studio-sarsh"
+      ],
+      "areaServed": ["Chennai", "Nungambakkam", "ECR", "OMR", "Chengalpattu", "Tamil Nadu"]
+    }
+    </script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Google Fonts - Luxury Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Professional Design System -->
-    <style>
-        /* Typography System */
-        .font-serif { font-family: 'Cormorant Garamond', serif; }
-        .font-sans { font-family: 'Inter', sans-serif; }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
-        /* Professional Color System */
-        :root {
-            --primary-black: #1a1a1a;
-            --warm-white: #faf9f7;
-            --luxury-gold: #c9a96e;
-            --medium-gray: #6b6b6b;
-            --light-gray: #f5f5f5;
-        }
 
-        /* Animation System */
-        .fade-in { animation: fadeIn 0.6s ease-out; }
-        .slide-up { animation: slideUp 0.8s ease-out; }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
 
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Button System */
-        .btn-primary {
-            @apply inline-flex items-center justify-center px-6 py-3 bg-black text-white font-medium tracking-wide hover:bg-gray-800 transition-all duration-300;
-            font-size: 13px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-radius: 0;
-            text-decoration: none;
-        }
-
-        .btn-hero {
-            @apply inline-flex items-center justify-center font-medium tracking-wide transition-all duration-300;
-            background: var(--luxury-gold);
-            color: var(--primary-black);
-            font-size: 16px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-radius: 0;
-            text-decoration: none;
-            padding: 18px 48px;
-            margin-top: 24px;
-        }
-
-        .btn-hero:hover {
-            background: #b8956a;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.3);
-        }
-
-        .btn-secondary {
-            @apply inline-flex items-center justify-center px-6 py-3 border border-black text-black bg-transparent font-medium tracking-wide hover:bg-black hover:text-white transition-all duration-300;
-            font-size: 13px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-radius: 0;
-            text-decoration: none;
-        }
-
-        /* Mobile Menu Specific */
-        @media (max-width: 768px) {
-            .btn-primary {
-                padding: 16px 24px;
-                font-size: 14px;
-                width: 100%;
-                display: flex;
-            }
-
-            .btn-hero {
-                padding: 16px 32px;
-                font-size: 14px;
-                width: auto;
-                display: inline-flex;
-                margin-top: 20px;
-            }
-        }
-
-        /* Header System */
-        .header-hidden {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-
-        .header-visible {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .header-glass {
-            backdrop-filter: blur(20px);
-            background: rgba(250, 249, 247, 0.95);
-            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
-        }
-
-        .header-mobile-open {
-            background: rgba(250, 249, 247, 1);
-            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
-        }
-
-        .nav-link {
-            position: relative;
-            font-size: 13px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--luxury-gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* Typography Scale */
-        .text-hero { font-size: clamp(3rem, 8vw, 6rem); line-height: 1.1; }
-        .text-display { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.2; }
-        .text-heading { font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.3; }
-        .text-subheading { font-size: 1.25rem; line-height: 1.4; }
-        .text-body { font-size: 1rem; line-height: 1.6; }
-        .text-caption { font-size: 0.875rem; line-height: 1.5; }
-
-        /* Layout System */
-        .container-custom { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .section-padding { padding: 5rem 0; }
-
-        @media (min-width: 768px) {
-            .section-padding { padding: 7rem 0; }
-        }
-
-        /* Luxury Accents */
-        .gold-accent { color: var(--luxury-gold); }
-        .divider-gold {
-            width: 60px;
-            height: 1px;
-            background: var(--luxury-gold);
-            margin: 2rem auto;
-        }
-
-        /* Custom Select Dropdown */
-        .select-wrapper {
-            position: relative;
-        }
-
-        .select-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: 16px;
-            transform: translateY(-50%);
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 5px solid rgba(255, 255, 255, 0.7);
-            pointer-events: none;
-        }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: #25d366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-float svg {
-            width: 30px;
-            height: 30px;
-            color: white;
-        }
-
-        /* Hero Logo */
-        .hero-logo {
-            position: fixed;
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            transition: all 0.5s ease;
-            opacity: 1;
-        }
-
-        .hero-logo.hidden {
-            opacity: 0;
-            transform: translateX(-50%) translateY(-20px);
-            pointer-events: none;
-        }
-
-        .hero-logo img {
-            height: 80px;
-            width: auto;
-        }
-
-        @media (max-width: 768px) {
-            .hero-logo img {
-                height: 60px;
-            }
-        }
-    </style>
-    
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'luxury-gold': '#c9a96e',
-                        'warm-white': '#faf9f7',
-                        'primary-black': '#1a1a1a',
-                        'medium-gray': '#6b6b6b',
-                        'light-gray': '#f5f5f5',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Cormorant Garamond', 'serif'],
-                    },
-                    spacing: {
-                        '18': '4.5rem',
-                        '88': '22rem',
-                        '128': '32rem',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
+
 <body class="font-sans text-primary-black bg-warm-white antialiased">
     <!-- Hero Logo -->
     <div class="hero-logo" id="hero-logo">
-        <img src="images/logo/Logo Submark Cream.png" alt="Studio SARSH" />
+        <img src="images/logo/Logo Submark Cream.webp" alt="Studio SARSH" width="105" height="105">
     </div>
     <!-- Professional Header -->
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-hidden" id="main-header">
         <nav class="container-custom flex items-center justify-between py-6">
             <!-- Logo -->
-            <a href="index.html" class="text-2xl font-serif font-medium text-primary-black hover:text-luxury-gold transition-colors duration-300">
+            <a href="index.html"
+                class="text-2xl font-serif font-medium text-primary-black hover:text-luxury-gold transition-colors duration-300">
                 Studio <span class="gold-accent">SARSH</span>
             </a>
 
@@ -300,9 +84,11 @@
             </div>
 
             <!-- Mobile menu button -->
-            <button id="mobile-menu-btn" class="md:hidden p-2 text-primary-black hover:text-luxury-gold transition-colors">
+            <button id="mobile-menu-btn"
+                class="md:hidden p-2 text-primary-black hover:text-luxury-gold transition-colors">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </nav>
@@ -327,9 +113,8 @@
         <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
             <div class="absolute inset-0 z-0">
-                <img src="images/hero-farmhouse.jpg"
-                     alt="Studio SARSH - Luxury Interior Design"
-                     class="w-full h-full object-cover">
+                <img src="images/hero-farmhouse.jpg" alt="Studio SARSH - Luxury Interior Design"
+                    class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black/40"></div>
             </div>
 
@@ -344,7 +129,8 @@
 
                     <!-- Subheadline -->
                     <p class="text-subheading font-light mb-12 max-w-2xl mx-auto opacity-90">
-                        Award-winning interior architecture studio creating sophisticated spaces that reflect your story and elevate your lifestyle.
+                        Award-winning interior architecture studio creating sophisticated spaces that reflect your story
+                        and elevate your lifestyle.
                     </p>
 
                     <!-- Primary CTA -->
@@ -355,7 +141,8 @@
                     </div>
 
                     <!-- Trust Indicators -->
-                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 text-caption opacity-80">
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 text-caption opacity-80">
                         <div class="flex items-center space-x-2">
                             <div class="w-2 h-2 bg-luxury-gold rounded-full"></div>
                             <span>Nungambakkam, Chennai</span>
@@ -377,7 +164,8 @@
                 <div class="flex flex-col items-center space-y-2 animate-bounce">
                     <span class="text-xs uppercase tracking-widest">Scroll</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
                 </div>
             </div>
@@ -398,15 +186,19 @@
 
                         <div class="space-y-6 text-body text-medium-gray">
                             <p class="text-lg leading-relaxed">
-                                Studio SARSH is an interior architecture and design studio rooted in emotional storytelling, timeless elegance, and contextual sensitivity.
+                                Studio SARSH is an interior architecture and design studio rooted in emotional
+                                storytelling, timeless elegance, and contextual sensitivity.
                             </p>
 
                             <p>
-                                Founded by Susmitha Velluru, our studio was born from a quiet but unwavering belief that spaces should do more than impress. They should make you feel seen, safe, and inspired.
+                                Founded by Susmitha Velluru, our studio was born from a quiet but unwavering belief that
+                                spaces should do more than impress. They should make you feel seen, safe, and inspired.
                             </p>
 
                             <p>
-                                After working across India and the U.S. and completing her Master's in Interior Architecture, Susmitha returned to Chennai to build a studio that felt personal, where every project is led with heart, clarity, and creative depth.
+                                After working across India and the U.S. and completing her Master's in Interior
+                                Architecture, Susmitha returned to Chennai to build a studio that felt personal, where
+                                every project is led with heart, clarity, and creative depth.
                             </p>
                         </div>
 
@@ -427,24 +219,27 @@
                     <div class="slide-up">
                         <div class="relative">
                             <div class="aspect-[4/5] overflow-hidden">
-                                <img src="images/projects/2/2.png"
-                                     alt="Studio SARSH - Brushed in Blue Project"
-                                     class="w-full h-full object-cover">
+                                <img src="images/projects/2/2.webp" alt="Studio SARSH - Brushed in Blue Project"
+                                    class="w-full h-full object-cover">
                             </div>
 
                             <!-- Quote Card - Desktop -->
-                            <div class="hidden lg:block absolute -bottom-8 -left-8 bg-white p-8 shadow-lg max-w-sm border-l-2 border-luxury-gold">
+                            <div
+                                class="hidden lg:block absolute -bottom-8 -left-8 bg-white p-8 shadow-lg max-w-sm border-l-2 border-luxury-gold">
                                 <p class="text-body italic text-medium-gray mb-4">
-                                    "We design for anyone who believes their space should reflect who they are and support who they're becoming."
+                                    "We design for anyone who believes their space should reflect who they are and
+                                    support who they're becoming."
                                 </p>
-                                <div class="text-caption font-medium text-primary-black">— Susmitha Velluru, Founder</div>
+                                <div class="text-caption font-medium text-primary-black">— Susmitha Velluru, Founder
+                                </div>
                             </div>
                         </div>
 
                         <!-- Quote Card - Mobile -->
                         <div class="lg:hidden mt-8 bg-white p-6 shadow-lg border-l-4 border-luxury-gold">
                             <p class="text-body italic text-medium-gray mb-4">
-                                "We design for anyone who believes their space should reflect who they are and support who they're becoming."
+                                "We design for anyone who believes their space should reflect who they are and support
+                                who they're becoming."
                             </p>
                             <div class="text-caption font-medium text-primary-black">— Susmitha Velluru, Founder</div>
                         </div>
@@ -473,12 +268,15 @@
                     <div class="slide-up bg-white p-8 hover:shadow-lg transition-shadow duration-300">
                         <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                </path>
                             </svg>
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Interior Architecture</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            We rethink your space from the ground up - structure, flow, and function, so it supports your lifestyle beautifully.
+                            We rethink your space from the ground up - structure, flow, and function, so it supports
+                            your lifestyle beautifully.
                         </p>
                     </div>
 
@@ -486,12 +284,15 @@
                     <div class="slide-up bg-white p-8 hover:shadow-lg transition-shadow duration-300">
                         <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z">
+                                </path>
                             </svg>
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Space Planning</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            Strategic layout design that maximizes functionality while creating beautiful, flowing spaces that feel natural and intuitive.
+                            Strategic layout design that maximizes functionality while creating beautiful, flowing
+                            spaces that feel natural and intuitive.
                         </p>
                     </div>
 
@@ -499,12 +300,15 @@
                     <div class="slide-up bg-white p-8 hover:shadow-lg transition-shadow duration-300">
                         <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z">
+                                </path>
                             </svg>
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Material Selection</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            Curated selection of materials, finishes, and textures that create the perfect atmosphere for your unique lifestyle.
+                            Curated selection of materials, finishes, and textures that create the perfect atmosphere
+                            for your unique lifestyle.
                         </p>
                     </div>
 
@@ -512,12 +316,14 @@
                     <div class="slide-up bg-white p-8 hover:shadow-lg transition-shadow duration-300">
                         <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
                             </svg>
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Turnkey Solutions</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            Complete project management from concept to completion, delivering your space fully ready to live and work in.
+                            Complete project management from concept to completion, delivering your space fully ready to
+                            live and work in.
                         </p>
                     </div>
 
@@ -525,12 +331,15 @@
                     <div class="slide-up bg-white p-8 hover:shadow-lg transition-shadow duration-300">
                         <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                </path>
                             </svg>
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">3D Visualization</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            Detailed 3D renderings and mood boards that let you experience your space before construction begins.
+                            Detailed 3D renderings and mood boards that let you experience your space before
+                            construction begins.
                         </p>
                     </div>
 
@@ -538,12 +347,15 @@
                     <div class="slide-up bg-white p-8 hover:shadow-lg transition-shadow duration-300">
                         <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
                             </svg>
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Remote Design</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            Full virtual design services with trusted local support for execution, serving clients across India and beyond.
+                            Full virtual design services with trusted local support for execution, serving clients
+                            across India and beyond.
                         </p>
                     </div>
                 </div>
@@ -560,7 +372,8 @@
                     </h2>
                     <div class="divider-gold"></div>
                     <p class="text-subheading text-medium-gray max-w-3xl mx-auto">
-                        Each project tells a story of transformation, creating spaces that are deeply personal and quietly powerful.
+                        Each project tells a story of transformation, creating spaces that are deeply personal and
+                        quietly powerful.
                     </p>
                 </div>
 
@@ -570,16 +383,16 @@
                     <div class="slide-up group cursor-pointer" onclick="window.location.href='project-1.html'">
                         <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/projects/1/1.png"
-                                     alt="Light and Lineage Farmhouse"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="images/projects/1/1.webp" alt="Light and Lineage Farmhouse"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
                                 Chennai, India
                             </div>
-                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                            <h3
+                                class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
                                 Light and Lineage Farmhouse
                             </h3>
                         </div>
@@ -589,16 +402,16 @@
                     <div class="slide-up group cursor-pointer" onclick="window.location.href='project-2.html'">
                         <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/projects/2/1.png"
-                                     alt="Brushed in Blue Villa"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="images/projects/2/1.webp" alt="Brushed in Blue Villa"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
                                 Chennai, India
                             </div>
-                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                            <h3
+                                class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
                                 Brushed in Blue
                             </h3>
                         </div>
@@ -608,16 +421,16 @@
                     <div class="slide-up group cursor-pointer" onclick="window.location.href='project-3.html'">
                         <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/projects/3/1.png"
-                                     alt="The Row House Family Home"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="images/projects/3/1.webp" alt="The Row House Family Home"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
                                 Chennai, India
                             </div>
-                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                            <h3
+                                class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
                                 The Row House
                             </h3>
                         </div>
@@ -627,16 +440,16 @@
                     <div class="slide-up group cursor-pointer" onclick="window.location.href='project-4.html'">
                         <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/projects/4/1.png"
-                                     alt="Nooks and Notebooks Kids Room"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="images/projects/4/1.webp" alt="Nooks and Notebooks Kids Room"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
                                 Chennai, India
                             </div>
-                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                            <h3
+                                class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
                                 Nooks and Notebooks
                             </h3>
                         </div>
@@ -646,16 +459,16 @@
                     <div class="slide-up group cursor-pointer" onclick="window.location.href='project-5.html'">
                         <div class="relative overflow-hidden mb-4">
                             <div class="aspect-[4/3]">
-                                <img src="images/projects/5/1.png"
-                                     alt="Modern Sanctuary"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <img src="images/projects/5/1.webp" alt="Modern Sanctuary"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <div class="text-caption text-luxury-gold uppercase tracking-wide font-medium">
                                 Chennai, India
                             </div>
-                            <h3 class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
+                            <h3
+                                class="text-xl font-serif font-medium group-hover:text-luxury-gold transition-colors duration-300">
                                 Modern Sanctuary
                             </h3>
                         </div>
@@ -689,45 +502,53 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     <!-- Step 1 -->
                     <div class="slide-up text-center">
-                        <div class="w-16 h-16 bg-luxury-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-serif font-medium">
+                        <div
+                            class="w-16 h-16 bg-luxury-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-serif font-medium">
                             01
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Discovery</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            We begin by listening to your lifestyle, story, and needs to understand what feels right to you.
+                            We begin by listening to your lifestyle, story, and needs to understand what feels right to
+                            you.
                         </p>
                     </div>
 
                     <!-- Step 2 -->
                     <div class="slide-up text-center">
-                        <div class="w-16 h-16 bg-luxury-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-serif font-medium">
+                        <div
+                            class="w-16 h-16 bg-luxury-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-serif font-medium">
                             02
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Concept</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            We craft the mood through vision boards, color palettes, and materials that set the emotional direction.
+                            We craft the mood through vision boards, color palettes, and materials that set the
+                            emotional direction.
                         </p>
                     </div>
 
                     <!-- Step 3 -->
                     <div class="slide-up text-center">
-                        <div class="w-16 h-16 bg-luxury-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-serif font-medium">
+                        <div
+                            class="w-16 h-16 bg-luxury-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-serif font-medium">
                             03
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Design</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            From floor plans to 3D visuals, we detail every element that makes your space functional and beautiful.
+                            From floor plans to 3D visuals, we detail every element that makes your space functional and
+                            beautiful.
                         </p>
                     </div>
 
                     <!-- Step 4 -->
                     <div class="slide-up text-center">
-                        <div class="w-16 h-16 bg-luxury-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-serif font-medium">
+                        <div
+                            class="w-16 h-16 bg-luxury-gold text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-serif font-medium">
                             04
                         </div>
                         <h3 class="text-heading font-serif font-medium mb-4">Realization</h3>
                         <p class="text-body text-medium-gray leading-relaxed">
-                            We guide execution and add final touches, bringing your space to life with feeling and intention.
+                            We guide execution and add final touches, bringing your space to life with feeling and
+                            intention.
                         </p>
                     </div>
                 </div>
@@ -748,7 +569,8 @@
                         <div class="divider-gold"></div>
 
                         <p class="text-subheading text-gray-300 mb-12 leading-relaxed">
-                            Whether it's a quiet home, a bold creative studio, or a space of transition, Studio SARSH designs with intention, always.
+                            Whether it's a quiet home, a bold creative studio, or a space of transition, Studio SARSH
+                            designs with intention, always.
                         </p>
 
                         <!-- Contact Info -->
@@ -756,12 +578,15 @@
                             <div class="flex items-start space-x-4">
                                 <div class="w-6 h-6 text-luxury-gold mt-1">
                                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
                                     </svg>
                                 </div>
                                 <div>
                                     <div class="text-body font-medium mb-1">Email</div>
-                                    <a href="mailto:susmitha@studiosarsh.com" class="text-luxury-gold hover:text-white transition-colors">
+                                    <a href="mailto:susmitha@studiosarsh.com"
+                                        class="text-luxury-gold hover:text-white transition-colors">
                                         susmitha@studiosarsh.com
                                     </a>
                                 </div>
@@ -770,8 +595,11 @@
                             <div class="flex items-start space-x-4">
                                 <div class="w-6 h-6 text-luxury-gold mt-1">
                                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                     </svg>
                                 </div>
                                 <div>
@@ -787,7 +615,8 @@
                             <div class="flex items-start space-x-4">
                                 <div class="w-6 h-6 text-luxury-gold mt-1">
                                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
                                 <div>
@@ -805,37 +634,42 @@
                             <p class="text-body text-gray-300">Let's discuss how we can transform your space</p>
                         </div>
 
-                        <form action="https://formcarry.com/s/icvIy4SVMZp" method="POST" enctype="multipart/form-data" class="space-y-6">
+                        <form action="https://formcarry.com/s/icvIy4SVMZp" method="POST" enctype="multipart/form-data"
+                            class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <input type="text" name="full_name" placeholder="Full Name" required
-                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
+                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
 
                                 <input type="email" name="email" placeholder="Email Address" required
-                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
+                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
                             </div>
 
                             <input type="tel" name="phone" placeholder="Phone Number"
-                                   class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300">
 
                             <div class="select-wrapper">
-                                <select name="project_type" class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300 appearance-none cursor-pointer">
+                                <select name="project_type"
+                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300 appearance-none cursor-pointer">
                                     <option value="" class="text-gray-800 bg-white">Project Type</option>
-                                    <option value="residential" class="text-gray-800 bg-white">Residential Design</option>
+                                    <option value="residential" class="text-gray-800 bg-white">Residential Design
+                                    </option>
                                     <option value="commercial" class="text-gray-800 bg-white">Commercial Spaces</option>
-                                    <option value="consultation" class="text-gray-800 bg-white">Design Consultation</option>
+                                    <option value="consultation" class="text-gray-800 bg-white">Design Consultation
+                                    </option>
                                     <option value="other" class="text-gray-800 bg-white">Other</option>
                                 </select>
                             </div>
 
                             <textarea name="message" placeholder="Tell us about your project" rows="4"
-                                      class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300 resize-none"></textarea>
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-luxury-gold focus:bg-white/20 transition-all duration-300 resize-none"></textarea>
 
                             <!-- Hidden fields for additional context -->
                             <input type="hidden" name="_gotcha" style="display:none !important">
                             <input type="hidden" name="source" value="Studio SARSH Website">
                             <input type="hidden" name="form_type" value="Consultation Request">
 
-                            <button type="submit" class="w-full px-6 py-4 bg-luxury-gold text-primary-black font-medium uppercase tracking-wide hover:bg-luxury-gold/90 transition-all duration-300">
+                            <button type="submit"
+                                class="w-full px-6 py-4 bg-luxury-gold text-primary-black font-medium uppercase tracking-wide hover:bg-luxury-gold/90 transition-all duration-300">
                                 Schedule Consultation
                             </button>
                         </form>
@@ -858,19 +692,29 @@
                         Creating timeless interiors that reflect your story and elevate your lifestyle.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="mailto:susmitha@studiosarsh.com" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="Email">
+                        <a href="mailto:susmitha@studiosarsh.com"
+                            class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="Email">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/studio_sarsh?igsh=MWpyNjFpNHY2bm14cA%3D%3D&utm_source=qr" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/studio_sarsh?igsh=MWpyNjFpNHY2bm14cA%3D%3D&utm_source=qr"
+                            class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="Instagram"
+                            target="_blank" rel="noopener noreferrer">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01M8 12a4 4 0 108 0 4 4 0 00-8 0zM21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01M8 12a4 4 0 108 0 4 4 0 00-8 0zM21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z">
+                                </path>
                             </svg>
                         </a>
-                        <a href="https://linkedin.com/company/studio-sarsh" class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <a href="https://linkedin.com/company/studio-sarsh"
+                            class="text-medium-gray hover:text-luxury-gold transition-colors" aria-label="LinkedIn"
+                            target="_blank" rel="noopener noreferrer">
                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 616 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 616-6zM2 9h4v12H2zM4 2a2 2 0 11-4 4 2 2 0 014-4z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 11-4 0
+2 2 0 014 0z" />
                             </svg>
                         </a>
                     </div>
@@ -892,7 +736,8 @@
                     <h4 class="text-body font-medium text-primary-black mb-6">Contact</h4>
                     <div class="space-y-3">
                         <div>
-                            <a href="mailto:susmitha@studiosarsh.com" class="text-medium-gray hover:text-luxury-gold transition-colors">
+                            <a href="mailto:susmitha@studiosarsh.com"
+                                class="text-medium-gray hover:text-luxury-gold transition-colors">
                                 susmitha@studiosarsh.com
                             </a>
                         </div>
@@ -910,16 +755,18 @@
 
             <!-- Copyright -->
             <div class="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-caption text-medium-gray">&copy; 2024 Studio SARSH. All rights reserved.</p>
+                <p class="text-caption text-medium-gray">&copy; 2026 Studio SARSH. All rights reserved.</p>
                 <p class="text-caption text-medium-gray mt-4 md:mt-0">Designed with intention, built with care.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/916385770416" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <a href="https://wa.me/916385770416" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
+        aria-label="Contact us on WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
         </svg>
     </a>
 
@@ -1036,7 +883,7 @@
         // Form enhancement with Formcarry integration
         const form = document.querySelector('form');
         if (form) {
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
 
                 // Simple form validation
@@ -1074,38 +921,38 @@
                         'Accept': 'application/json'
                     }
                 })
-                .then(response => {
-                    if (response.ok) {
-                        // Success - Show confetti!
-                        triggerConfetti();
+                    .then(response => {
+                        if (response.ok) {
+                            // Success - Show confetti!
+                            triggerConfetti();
 
-                        button.textContent = 'Message Sent!';
-                        button.style.backgroundColor = '#10b981';
+                            button.textContent = 'Message Sent!';
+                            button.style.backgroundColor = '#10b981';
+                            button.style.opacity = '1';
+
+                            setTimeout(() => {
+                                button.textContent = originalText;
+                                button.style.backgroundColor = '';
+                                button.disabled = false;
+                                form.reset();
+                            }, 3000);
+                        } else {
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        // Error handling
+                        console.error('Form submission error:', error);
+                        button.textContent = 'Error - Try Again';
+                        button.style.backgroundColor = '#ef4444';
                         button.style.opacity = '1';
 
                         setTimeout(() => {
                             button.textContent = originalText;
                             button.style.backgroundColor = '';
                             button.disabled = false;
-                            form.reset();
                         }, 3000);
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                })
-                .catch(error => {
-                    // Error handling
-                    console.error('Form submission error:', error);
-                    button.textContent = 'Error - Try Again';
-                    button.style.backgroundColor = '#ef4444';
-                    button.style.opacity = '1';
-
-                    setTimeout(() => {
-                        button.textContent = originalText;
-                        button.style.backgroundColor = '';
-                        button.disabled = false;
-                    }, 3000);
-                });
+                    });
             });
         }
 
@@ -1201,4 +1048,5 @@
         }
     </script>
 </body>
+
 </html>

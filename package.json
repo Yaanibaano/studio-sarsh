@@ -1,0 +1,13 @@
+{
+  "name": "studio-sarsh",
+  "version": "1.0.0",
+  "description": "Studio SARSH Website - Luxury Interior Design",
+  "main": "index.html",
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/style.css --minify",
+    "watch": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
